@@ -54,3 +54,9 @@ div {
   animation: shimmer 1.5s infinite;
   opacity: 0.6;
 }
+
+/* styles/globals.css */
+h2 {
+  font-family: 'Fjalla One', sans-serif;
+}
+
