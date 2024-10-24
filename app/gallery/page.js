@@ -4,8 +4,13 @@ import { MdArrowOutward } from "react-icons/md";
 import Word_finder from "@/components/Word_Finder/Word_finder";
 import Word_finder_v2 from "@/components/Word_Finder/Word_finder_v2";
 import { IoStorefrontOutline, IoLogoWhatsapp } from "react-icons/io5"; // Import WhatsApp icon
+import localFont from 'next/font/local'
 
 import Link from "next/link";
+
+
+const myFont = localFont({ src: '../fonts/PlaywriteGBS-VariableFont_wght.ttf' })
+const myDancingFont = localFont({ src: '../fonts/DancingScript-Bold.ttf' })
 
 export default function Home() {
   return (
@@ -14,11 +19,11 @@ export default function Home() {
         <div className="flex justify-center sm:mx-auto md:ml-8  md:items-start">
           <div className="w-full flex-col flex gap-10">
             <div className="w-fit">
-              <span className="text-6xl md:text-4xl">
+              <span className={`text-6xl font-bold tracking-wide md:text-4xl  ${myDancingFont.className}`}>
                 <Word_finder_v2 text={"DISCOVER"} />
 
                 <div className="relative left-12 md:left-12">
-                  <Word_finder_v2 text={"YOUR SCENT"} />
+                  <Word_finder_v2 text={"YOUR  SCENT"} />
                 </div>
               </span>
             </div>
@@ -52,7 +57,7 @@ export default function Home() {
                 </Link>
               </div>
 
-              <div className="-z-10 flex-wrap md:text-4xl text-6xl w-fit">
+              <div className={`-z-10 flex-wrap md:text-4xl text-6xl w-fit font-bold tracking-wide ${myDancingFont.className}`}>
                 <div>
                   <Word_finder_v2 text={"LUXURY"} />
                 </div>

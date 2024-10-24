@@ -6,8 +6,11 @@ import Image from "next/image";
 import Link from "next/link";
 import Testimonials from "@/components/Testimonial/Testimonials";
 import Word_finder_v2 from "@/components/Word_Finder/Word_finder_v2";
+import localFont from 'next/font/local'
+
 
 const girl_pic_3 = "/images/girl_sellar3.jpg"; // Use the third image as background
+const myDancingFont = localFont({ src: './fonts/DancingScript-Bold.ttf' })
 
 function Page() {
   const [isBlurred, setIsBlurred] = useState(false);
@@ -50,7 +53,7 @@ function Page() {
         }}
       >
         <div className="w-3/5 flex flex-col justify-evenly gap-10 relative z-10 text-white">
-          <h1 className="text-7xl md:text-5xl font-bold drop-shadow-lg relative ">
+          <h1 className={`text-7xl md:text-5xl font-extrabold drop-shadow-lg tracking-wide relative ${myDancingFont.className}`}>
             <Word_finder_v2 text={" Your Destination for Exquisite Perfumes"} />
           </h1>
           <p className="text-xl drop-shadow-md">

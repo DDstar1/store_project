@@ -1,8 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import NavBar from "../components/NavBar";
-import { Analytics } from "@vercel/analytics/react";
-import Head from "next/head";
+import { Analytics } from "@vercel/analytics/react"
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,14 +22,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-[100vw]`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-[100vw] `}
         style={{ scrollbarWidth: "thin" }}
       >
         <>
